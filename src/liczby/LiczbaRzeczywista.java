@@ -1,6 +1,6 @@
 package liczby;
 
-public class LiczbaRzeczywista extends Liczba {
+public class LiczbaRzeczywista implements Liczba {
 
     private double wartosc;
 

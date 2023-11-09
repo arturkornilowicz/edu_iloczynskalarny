@@ -1,6 +1,6 @@
 package liczby;
 
-public class LiczbaCalkowita extends Liczba {
+public class LiczbaCalkowita implements Liczba {
 
     private int wartosc;
 

@@ -1,6 +1,6 @@
 package liczby;
 
-public class LiczbaWymierna extends Liczba {
+public class LiczbaWymierna implements Liczba {
 
     private int licznik;
     private int mianownik;

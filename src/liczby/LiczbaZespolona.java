@@ -1,6 +1,6 @@
 package liczby;
 
-public class LiczbaZespolona extends Liczba {
+public class LiczbaZespolona implements Liczba {
 
     private double re;
     private double im;
