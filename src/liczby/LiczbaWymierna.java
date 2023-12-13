@@ -41,6 +41,16 @@ public class LiczbaWymierna implements Liczba {
     }
 
     @Override
+    public int porownaj(Liczba arg) {
+        LiczbaWymierna a = (LiczbaWymierna) arg;
+        if (licznik * a.mianownik < mianownik * a.licznik)
+            return -1;
+        if (licznik * a.mianownik > mianownik * a.licznik)
+            return 1;
+        return 0;
+    }
+
+    @Override
     public String toString() {
         return licznik + "/" + mianownik;
     }

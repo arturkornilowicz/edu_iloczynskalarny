@@ -33,6 +33,11 @@ public class LiczbaCalkowita implements Liczba {
     }
 
     @Override
+    public int porownaj(Liczba arg) {
+        return wartosc - ((LiczbaCalkowita)arg).wartosc;
+    }
+
+    @Override
     public String toString() {
         return "" + wartosc;
     }

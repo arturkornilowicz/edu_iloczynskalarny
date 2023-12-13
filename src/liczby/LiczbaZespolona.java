@@ -31,13 +31,27 @@ public class LiczbaZespolona implements Liczba {
     @Override
     public LiczbaZespolona suma(Liczba arg) {
         LiczbaZespolona a = (LiczbaZespolona) arg;
-        return new LiczbaZespolona(re + a.re, im * a.im);
+        return new LiczbaZespolona(re + a.re, im + a.im);
     }
 
     @Override
     public LiczbaZespolona iloczyn(Liczba arg) {
         LiczbaZespolona a = (LiczbaZespolona) arg;
         return new LiczbaZespolona(re * a.re - im * a.im, im * a.re + re * a.im);
+    }
+
+    double modul() {
+        return Math.sqrt(re*re+im*im);
+    }
+
+    @Override
+    public int porownaj(Liczba arg) {
+        LiczbaZespolona a = (LiczbaZespolona) arg;
+        if (modul() < a.modul())
+            return -1;
+        if (modul() > a.modul())
+            return 1;
+        return 0;
     }
 
     @Override

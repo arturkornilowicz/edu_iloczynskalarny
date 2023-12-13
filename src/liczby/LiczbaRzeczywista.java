@@ -33,6 +33,16 @@ public class LiczbaRzeczywista implements Liczba {
     }
 
     @Override
+    public int porownaj(Liczba arg) {
+        LiczbaRzeczywista a = (LiczbaRzeczywista) arg;
+        if (wartosc < a.wartosc)
+            return -1;
+        if (wartosc > a.wartosc)
+            return 1;
+        return 0;
+    }
+
+    @Override
     public String toString() {
         return "" + wartosc;
     }
